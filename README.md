@@ -1,6 +1,6 @@
 🎓 BMSCE Legacy Digital Portal
 Architecting the Future of Engineering Education
-A comprehensive, high-fidelity web ecosystem developed for B.M.S. College of Engineering. This portal serves as a digital bridge between the institution's 80-year heritage and modern software engineering requirements, featuring specialized modules for Post-Graduate (MCA) and Doctoral (Ph.D.) studies.
+A comprehensive, high-fidelity web ecosystem developed for B.M.S. College of Engineering. This portal serves as a digital bridge between the institution's 80-year heritage and modern software engineering requirements, featuring specialized modules for Post-Graduate (MCA) and Engineering
 
 🏛️ UI/UX Philosophy: "Legacy Meets Logic"
 The design system is built on three pillars:
@@ -81,7 +81,6 @@ Plaintext
 │   ├── i18n.js         # Multilingual dictionary & logic
 │   └── slider.js       # Hero section transitions
 ├── mca.html            # Graduate Studies Module
-├── phd.html            # Doctoral Research Module
 └── index.html          # Central Hub
 📈 Performance & Optimization
 Critical Path CSS: Modularized styles to prevent render-blocking.
