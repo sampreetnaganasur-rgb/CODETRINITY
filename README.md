@@ -1,6 +1,6 @@
 🎓 BMSCE Legacy Digital Portal
 Architecting the Future of Engineering Education
-A comprehensive, high-fidelity web ecosystem developed for B.M.S. College of Engineering. This portal serves as a digital bridge between the institution's 80-year heritage and modern software engineering requirements, featuring specialized modules for Post-Graduate (MCA) and Engineering
+A comprehensive, high-fidelity web ecosystem developed for B.M.S. College of Engineering. This portal serves as a digital bridge between the institution's 80-year heritage and modern software engineering requirements, featuring specialized modules for Post-Graduate (MCA), M.Tech and Engineering
 
 🏛️ UI/UX Philosophy: "Legacy Meets Logic"
 The design system is built on three pillars:
@@ -21,7 +21,38 @@ Accessibility (A11y): Compatibility with screen readers for inclusive education.
 
 2. Specialized Academic Modules
 MCA Interactive Roadmap: A 4-phase CSS Grid layout showcasing the transition from Core Logic to Industry Integration.
+M.Tech Specialization Lines
+At BMSCE, the M.Tech lines are designed to align with "Industry 4.0" requirements.
 
+The Digital Architecture Line
+Focuses on the core of modern computing infrastructure.
+
+Computer Science & Engineering: Advanced algorithms, distributed systems, and virtualization.
+
+Computer Network Engineering: Cybersecurity, protocol design, and IoT (Internet of Things) frameworks.
+
+The Intelligence & Data Line
+The most rapidly growing line, focusing on the "Brain" of modern tech.
+
+Data Science: Big Data analytics, statistical modeling, and data mining.
+
+Machine Learning: Neural networks, deep learning, and computer vision.
+
+The VLSI & Embedded Line
+The "Hardware Line" that powers everything from smartphones to satellites.
+
+VLSI Design & Embedded Systems: Designing microchips (SoC) and low-power hardware circuits.
+
+Digital Communication: 5G/6G technologies, satellite communication, and signal processing.
+
+The Industrial & Energy Line
+Modernizing the physical world through efficiency.
+
+Machine Design: Advanced kinematics and stress analysis for high-performance machinery.
+
+Power Electronics: Smart grids, electric vehicle (EV) powertrains, and renewable energy conversion.
+
+Construction Technology: Sustainable materials, seismic design, and project management.
 Engineering Lines of Study (Branches)
 At BMSCE, these "lines" represent the diverse academic paths a student can take. They are generally categorized into four main clusters:
 
@@ -80,7 +111,6 @@ Plaintext
 ├── js/
 │   ├── i18n.js         # Multilingual dictionary & logic
 │   └── slider.js       # Hero section transitions
-├── mca.html            # Graduate Studies Module
 └── index.html          # Central Hub
 📈 Performance & Optimization
 Critical Path CSS: Modularized styles to prevent render-blocking.
