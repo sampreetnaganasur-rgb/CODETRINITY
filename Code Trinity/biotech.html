@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biotechnology Department Info</title>
+    <style>
+        :root {
+            --maroon: #8B1515;
+            --blue: #002147;
+            --gray: #f4f7f6;
+            --teal: #008080; /* Subtle accent for Bio-theme */
+        }
+
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background: #ffffff; 
+            color: #333;
+            padding: 40px 10%;
+        }
+
+        /* --- SECTION TITLES --- */
+        .dept-title { 
+            color: var(--blue); 
+            font-size: 2.8rem; 
+            margin-bottom: 10px;
+            border-bottom: 4px solid var(--maroon);
+            display: inline-block;
+        }
+
+        .sub-heading {
+            color: var(--maroon);
+            font-size: 1.5rem;
+            margin-top: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- QUICK STATS BAR --- */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: var(--gray);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            border-top: 5px solid var(--teal); /* Different top-bar color for BT */
+        }
+
+        .stat-card h2 { margin: 0; color: var(--maroon); font-size: 2rem; }
+        .stat-card p { margin: 5px 0 0; font-weight: bold; color: var(--blue); }
+
+        /* --- IMAGE GALLERY (LABS) --- */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 33, 71, 0.85);
+            color: white;
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        /* --- INFO CONTENT --- */
+        .content-box {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .highlight-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .highlight-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .highlight-list li::before {
+            content: "🧬"; /* DNA icon for Biotech */
+            margin-right: 15px;
+        }
+
+        /* BACK BUTTON */
+        .btn-back {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: var(--maroon);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="departments.html" class="btn-back">← Back to Departments</a>
+
+    <h1 class="dept-title">Biotechnology</h1>
+    
+    <div class="content-box">
+        <p>The Biotechnology department at BMSCE integrates biological sciences with engineering principles. Our goal is to develop sustainable solutions in healthcare, agriculture, and environmental management through cutting-edge research and ethical practice.</p>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h2>80%</h2>
+            <p>Placement/Higher Studies</p>
+        </div>
+        <div class="stat-card">
+            <h2>15+</h2>
+            <p>Research Patents</p>
+        </div>
+        <div class="stat-card">
+            <h2>20+</h2>
+            <p>Industry-Scale Labs</p>
+        </div>
+        <div class="stat-card">
+            <h2>100+</h2>
+            <p>Journal Publications</p>
+        </div>
+    </div>
+
+    <h2 class="sub-heading">Specialized Facilities</h2>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1579154235602-4c28ee6f056f?q=80&w=800" alt="Microbiology">
+            <div class="overlay">
+                <strong>Bio-Process Engineering Lab</strong>
+                <p style="margin: 5px 0 0; font-size: 0.85rem;">Studying microbial growth and fermentation.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=800" alt="DNA Research">
+            <div class="overlay">
+                <strong>Genetic Engineering Cell</strong>
+                <p style="margin: 5px 0 0; font-size: 0.85rem;">Advanced research in CRISPR and gene therapy.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1532187875605-7fe3584d0c48?q=80&w=800" alt="Bioinformatics">
+            <div class="overlay">
+                <strong>Bioinformatics Lab</strong>
+                <p style="margin: 5px 0 0; font-size: 0.85rem;">Using computing to solve complex biological data.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="sub-heading">Academic Focus Areas</h2>
+    <ul class="highlight-list">
+        <li><strong>Bio-informatics:</strong> Analyzing genetic sequences and protein structures using specialized software.</li>
+        <li><strong>Pharmaceutical Biotech:</strong> Designing and manufacturing vaccines and therapeutic drugs.</li>
+        <li><strong>Tissue Engineering:</strong> Researching regenerative medicine and artificial organ development.</li>
+        <li><strong>Environmental Biotechnology:</strong> Developing bio-remediation techniques to tackle pollution.</li>
+    </ul>
+
+    <p style="text-align: center; margin-top: 50px; color: #888;">
+        &copy; 2026 BMSCE Biotechnology Department Info Page
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMS College of Engineering | Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="top-controls">
+            <span class="lang-link" onclick="setLanguage('kn')">ಕನ್ನಡ</span> | 
+            <span class="lang-link" onclick="setLanguage('hi')">हिन्दी</span> | 
+            <span class="lang-link" onclick="setLanguage('en')">ENG</span>
+        </div>
+    </div>
+
+    <header class="middle-header">
+        <div class="logo-area">
+            <img src="assets/icons/bms.jpeg" alt="BMSCE Logo" class="header-icon">
+            <div class="logo-text-wrapper">
+                <h1>BMSCE</h1>
+                <p>A PREMIER PRIVATE ENGINEERING COLLEGE</p>
+            </div>
+        </div>
+        <div class="search-area">
+            <input type="text" placeholder="departments">
+            <button class="search-btn">Search</button>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+            <li class="dropdown">
+                <a href="departments.html" data-i18n="nav_dept">Departments ▾</a>
+                <div class="dropdown-content">
+                    <a href="departments.html">Computer Science</a>
+                    <a href="departments.html">Information Science</a>
+                    <a href="departments.html">Electronics & Comm.</a>
+                    <a href="departments.html">Mechanical Engineering</a>
+                    <a href="departments.html">Civil Engineering</a>
+                    <a href="departments.html">Electrical & Electronics</a>
+                    <a href="departments.html">Biotechnology</a>
+                    <a href="departments.html">AI & Data Science</a>
+                    <a href="departments.html">Aerospace Engineering</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="academics.html" data-i18n="nav_acad">Academics ▾</a>
+                <div class="dropdown-content">
+                    <a href="academics.html">Programs</a>
+                    <a href="admissions.html">Admissions</a>
+                </div>
+            </li>
+            <li><a href="research.html" data-i18n="nav_res">Research ▾</a></li>
+            <li><a href="placements.html" data-i18n="nav_place">Placements</a></li>
+            <li><a href="campus.html" data-i18n="nav_campus">Campus Life</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero-slider">
+        <div class="slide active" style="background-image: url('assets/images/slider1.png');"></div>
+        <div class="slide" style="background-image: url('assets/images/slider2.png');"></div>
+        <div class="slide" style="background-image: url('assets/images/slider3.png');"></div>
+        
+        <div class="slider-overlay">
+            <h2 data-i18n="slider_title">B.M.S. COLLEGE OF ENGINEERING</h2>
+            <p data-i18n="slider_sub">First Private Sector Initiative in Engineering Education in India.</p>
+        </div>
+    </section>
+
+    <div class="container welcome-section">
+        <div class="welcome-text">
+            <h2 style="color: #0a1f44; font-size: 2.5rem; line-height: 1.2; margin-bottom: 20px;">Welcome to BMS College of Engineering</h2>
+            <p style="font-size: 1.1rem; color: #555; margin-bottom: 30px;">Empowering innovators through world-class education and research. Founded in 1946, we blend a rich heritage with cutting-edge technology.</p>
+            <a href="about.html" class="btn">Discover Our Legacy →</a>
+        </div>
+
+        <div class="welcome-images">
+            <video class="float-img img-1" autoplay muted loop playsinline>
+                <source src="assets/images/overview.mp4" type="video/mp4">
+            </video>
+            <img src="assets/images/campus.png" class="float-img img-2" alt="Campus">
+            <img src="assets/images/faculty.png" class="float-img img-3" alt="Faculty">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

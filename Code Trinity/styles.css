@@ -1,0 +1,304 @@
+/* --- UNIVERSAL STYLES --- */
+:root {
+    --primary-maroon: #081735;
+    --nav-bg: #ffffff;
+    --text-dark: #333333;
+    --text-light: #f4f4f4;
+    --hover-bg: #f8f8f8;
+    --border-color: #dddddd;
+    --accent-gold: #ffcc00;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+body { 
+    background-color: #ffffff; 
+    color: var(--text-dark); 
+    overflow-x: hidden; 
+    line-height: 1.6; 
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* --- 1. TOP UTILITY BAR --- */
+.top-bar { 
+    background-color: var(--primary-maroon); 
+    color: white; 
+    font-size: 0.8rem; 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 8px 5%; 
+}
+
+.top-links a, .top-controls span { 
+    margin-right: 15px; 
+    transition: color 0.3s; 
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.top-links a:hover, .top-controls span:hover { 
+    color: var(--accent-gold); 
+    text-decoration: underline;
+}
+
+/* --- 2. MIDDLE HEADER (Logo & Search) --- */
+.middle-header { 
+    background-color: white; 
+    padding: 25px 5%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo-area {
+    display: flex;
+    align-items: center; /* This keeps the icon and text on the same line */
+    gap: 15px;
+}
+
+.header-icon {
+    height: 75px; /* Adjust height based on your logo.png */
+    width: auto;
+}
+
+.logo-text-wrapper h1 { 
+    color: var(--primary-maroon); 
+    font-size: 2.8rem; 
+    font-weight: 800; 
+    line-height: 1;
+    letter-spacing: -1px; 
+}
+
+.logo-text-wrapper p { 
+    font-size: 0.85rem; 
+    color: #555; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    margin-top: 4px;
+}
+
+.search-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.search-area input { 
+    padding: 10px 15px; 
+    border: 1px solid #ccc; 
+    outline: none; 
+    width: 280px; 
+    background: #fdfdfd;
+}
+
+.search-btn { 
+    padding: 8px 25px; 
+    background: var(--primary-maroon); 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    font-weight: bold;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.search-btn:hover { background:#1F3A6D; }
+
+/* --- 3. MAIN NAVIGATION --- */
+.main-nav { 
+    background-color: white; 
+    border-top: 1px solid #eee;
+    border-bottom: 4px solid var(--primary-maroon); 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
+
+.nav-list { 
+    list-style: none; 
+    display: flex; 
+    padding: 0 5%; 
+    margin: 0; 
+}
+
+.nav-list > li { position: relative; }
+
+.nav-list > li > a { 
+    display: block; 
+    padding: 18px 20px; 
+    font-weight: 600; 
+    font-size: 0.9rem; 
+    color: #444;
+    transition: 0.3s; 
+}
+
+.nav-list > li > a:hover, .nav-list > li > a.active { 
+    background-color: var(--hover-bg); 
+    color: var(--primary-maroon); 
+}
+
+/* --- 4. DROPDOWNS --- */
+.dropdown-content { 
+    display: none; 
+    position: absolute; 
+    background-color: white; 
+    min-width: 250px; 
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1); 
+    border-top: 3px solid var(--primary-maroon); 
+    z-index: 1001; 
+}
+
+.dropdown-content a { 
+    padding: 12px 20px; 
+    display: block; 
+    border-bottom: 1px solid #f0f0f0; 
+    font-size: 0.85rem; 
+    color: #333;
+    transition: 0.2s; 
+}
+
+.dropdown-content a:hover { 
+    background-color: var(--hover-bg); 
+    padding-left: 25px; 
+    color: var(--primary-maroon); 
+}
+
+.nav-list li:hover .dropdown-content { display: block; }
+
+/* --- 5. HERO SLIDER --- */
+.hero-slider { 
+    position: relative; 
+    width: 100%; 
+    height: 70vh; 
+    overflow: hidden; 
+    background-color: #000; 
+}
+
+.slide { 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    opacity: 0; 
+    transition: opacity 1s ease-in-out; 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.slide.active { opacity: 1; }
+
+.slider-overlay { 
+    position: absolute; 
+    bottom: 10%; 
+    left: 0; 
+    background: rgba(10, 31, 68, 0.75); 
+    color: white; 
+    padding: 20px 40px; 
+    border-left: 8px solid var(--accent-gold); 
+    z-index: 10; 
+    max-width: 80%; 
+}
+
+.slider-overlay h2 { font-size: 2.2rem; margin-bottom: 5px; }
+
+/* --- 6. WELCOME SECTION (Floating Images) --- */
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 100px 5%;
+}
+
+.welcome-text { flex: 1.2; }
+
+.welcome-images {
+    flex: 1;
+    position: relative;
+    min-height: 450px;
+}
+
+.float-img {
+    position: absolute;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border: 6px solid white;
+    transition: 0.5s;
+    animation: floatUpDown 5s ease-in-out infinite;
+}
+
+.img-1 { width: 300px; height: 350px; left: 0; z-index: 2; top: 0; }
+.img-2 { width: 220px; height: 280px; right: 0; top: -40px; z-index: 1; animation-delay: 1.5s; }
+.img-3 { width: 240px; height: 220px; bottom: -30px; right: 40px; z-index: 3; animation-delay: 0.8s; }
+
+.float-img:hover { transform: scale(1.05); z-index: 10; }
+
+@keyframes floatUpDown {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-25px); }
+    100% { transform: translateY(0px); }
+}
+
+/* --- 7. BUTTONS --- */
+.btn { 
+    display: inline-block;
+    padding: 12px 28px; 
+    background: var(--primary-maroon); 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.btn:hover { background: #1B4FD8; transform: translateX(10px); }
+
+/* --- 8. RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .middle-header { flex-direction: column; gap: 20px; text-align: center; }
+    .logo-area { flex-direction: column; }
+    .search-area { align-items: center; }
+    .welcome-section { flex-direction: column; text-align: center; }
+    .welcome-images { width: 100%; min-height: 500px; transform: scale(0.8); }
+    .nav-list { justify-content: center; }
+}
+/* --- from here --- */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    background: white;        /* Navbar white */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* small shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: black;             /* Text black */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+nav a:hover {
+    color: #0A1F44;           /* Your dark blue */
+}
+
+/* Active page */
+nav a.active {
+    color: #0A1F44;
+    border-bottom: 2px solid #0A1F44;
+}

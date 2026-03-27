@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.Tech Postgraduate | BMSCE Legacy</title>
+    <style>
+        :root {
+            --navy: #001f3f; 
+            --maroon: #8B1515; 
+            --gold: #FFD700; 
+            --text-dark: #333;
+        }
+
+        body { 
+            margin: 0; 
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: #ffffff; 
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* --- 1. CENTERED NAVIGATION (Matches Screenshot) --- */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px 0;
+            background: white;
+            gap: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--maroon); }
+
+        .active-link {
+            border-bottom: 2px solid var(--navy);
+            padding-bottom: 5px;
+        }
+
+        /* --- 2. LEGACY BANNER (Matches Screenshot) --- */
+        .legacy-header {
+            background-color: var(--navy); 
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .legacy-header h1 {
+            font-size: 3.2rem;
+            margin: 0;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .legacy-header p {
+            font-size: 1.2rem;
+            margin-top: 15px;
+            color: #ccc;
+        }
+
+        /* --- 3. THE 2-YEAR RESEARCH ROADMAP --- */
+        .container {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 5%;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--maroon);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .roadmap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin: 50px 0 80px;
+        }
+
+        .year-card {
+            background: rgba(0, 31, 63, 0.03); 
+            border: 1px solid rgba(0,31,63,0.05);
+            padding: 40px;
+            border-radius: 20px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .year-card:hover {
+            border-color: var(--navy);
+            transform: translateY(-5px);
+            background: rgba(0, 31, 63, 0.05);
+        }
+
+        .year-num {
+            font-size: 5rem;
+            font-weight: 900;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            opacity: 0.1;
+            color: var(--navy);
+        }
+
+        .year-card h3 { color: var(--navy); font-size: 1.6rem; margin-top: 0; }
+
+        /* --- 4. FEATURE GRID (Circular Image & Text) --- */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 100px;
+            align-items: center;
+        }
+
+        .feature-text {
+            background: #f9f9f9;
+            padding: 50px;
+            border-radius: 20px;
+            border-top: 5px solid var(--navy);
+        }
+        
+        .feature-text h2 {
+            margin-top: 0;
+            color: var(--navy);
+            font-size: 2.2rem;
+            border-bottom: 2px solid var(--maroon);
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .image-wrap { text-align: center; }
+
+        .main-img {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%; /* Circular Style from Screenshot */
+            object-fit: cover;
+            border: 10px solid #f0f0f0;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        /* --- 5. MINI STATS BAR --- */
+        .mini-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+
+        .m-stat b { display: block; font-size: 1.8rem; color: var(--maroon); }
+        .m-stat span { font-size: 0.8rem; color: #777; text-transform: uppercase; font-weight: bold; }
+
+        footer {
+            margin-top: 100px;
+            padding: 40px 0;
+            text-align: center;
+            background: #f4f4f4;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="departments.html">Departments</a>
+        <a href="mtech.html" class="active-link">Academics</a>
+        <a href="research.html">Research</a>
+        <a href="placements.html">Placements</a>
+        <a href="campus.html">Campus</a>
+    </nav>
+
+    <div class="legacy-header">
+        <h1>Master of Technology</h1>
+        <p>Advanced Research Excellence Since 1946</p>
+    </div>
+
+    <div class="container">
+        
+        <div style="text-align: center;">
+            <span class="badge">2-Year Specialization</span>
+            <p style="font-size: 1.1rem; color: #555; max-width: 700px; margin: 0 auto;">Our M.Tech program is designed for engineers seeking deep technical expertise and research-driven innovation.</p>
+        </div>
+
+        <div class="roadmap">
+            <div class="year-card">
+                <div class="year-num">01</div>
+                <h3>Advanced Core</h3>
+                <p>Deep dive into specialized algorithms, mathematical modeling, and high-level system architecture. Transition from a general engineer to a subject matter expert.</p>
+            </div>
+            <div class="year-card">
+                <div class="year-num">02</div>
+                <h3>Thesis & Industry</h3>
+                <p>One full year dedicated to specialized research and industrial internships. Focus on publishing papers and developing prototypes for real-world impact.</p>
+            </div>
+        </div>
+
+        <div class="feature-grid">
+            <div class="image-wrap">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800" class="main-img" alt="Research Lab">
+            </div>
+
+            <div class="feature-text">
+                <h2>The Research Edge</h2>
+                <p>M.Tech at BMSCE is powered by our <b>Centre of Excellence</b>. Postgraduates work directly on funded projects from ISRO, DRDO, and leading tech giants, bridging the gap between theory and discovery.</p>
+                
+                <div class="mini-stats">
+                    <div class="m-stat"><b>70+</b><span>Credits</span></div>
+                    <div class="m-stat"><b>10+</b><span>Research Centres</span></div>
+                    <div class="m-stat"><b>GATE</b><span>Qualified Faculty</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 BMS College of Engineering. All Rights Reserved. | Legacy in Higher Academics
+    </footer>
+
+</body>
+</html>

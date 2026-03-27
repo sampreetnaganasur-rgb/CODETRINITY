@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Department Info</title>
+    <style>
+        :root {
+            --maroon: #8B1515;
+            --blue: #002147;
+            --gray: #f4f7f6;
+        }
+
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background: #ffffff; 
+            color: #333;
+            padding: 40px 10%;
+        }
+
+        /* --- SECTION TITLES --- */
+        .dept-title { 
+            color: var(--blue); 
+            font-size: 2.8rem; 
+            margin-bottom: 10px;
+            border-bottom: 4px solid var(--maroon);
+            display: inline-block;
+        }
+
+        .sub-heading {
+            color: var(--maroon);
+            font-size: 1.5rem;
+            margin-top: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- QUICK STATS BAR --- */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: var(--gray);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            border-top: 5px solid var(--blue);
+        }
+
+        .stat-card h2 { margin: 0; color: var(--maroon); font-size: 2rem; }
+        .stat-card p { margin: 5px 0 0; font-weight: bold; color: var(--blue); }
+
+        /* --- IMAGE GALLERY (LABS) --- */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 33, 71, 0.85);
+            color: white;
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        /* --- INFO CONTENT --- */
+        .content-box {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .highlight-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .highlight-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .highlight-list li::before {
+            content: "✔";
+            color: var(--maroon);
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        /* BACK BUTTON */
+        .btn-back {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: var(--maroon);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="departments.html" class="btn-back">← Back to Departments</a>
+
+    <h1 class="dept-title">Computer Science & Engineering</h1>
+    
+    <div class="content-box">
+        <p>Established in 1983, the CSE department at BMSCE is one of the oldest and most prestigious in the country. We focus on bridging the gap between theoretical computing and high-impact industrial applications.</p>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h2>100%</h2>
+            <p>Placement Record</p>
+        </div>
+        <div class="stat-card">
+            <h2>55 LPA</h2>
+            <p>Highest Package</p>
+        </div>
+        <div class="stat-card">
+            <h2>30+</h2>
+            <p>Labs & Research Cells</p>
+        </div>
+        <div class="stat-card">
+            <h2>200+</h2>
+            <p>Annual Publications</p>
+        </div>
+    </div>
+
+    <h2 class="sub-heading">Specialized Facilities</h2>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800" alt="Cyber Security">
+            <div class="overlay">
+                <strong>Cyber Security Lab</strong>
+                <p style="margin: 5px 0 0; font-size: 0.85rem;">Ethical hacking & Network defense training.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=800" alt="AI Lab">
+            <div class="overlay">
+                <strong>AI & Machine Learning Hub</strong>
+                <p style="margin: 5px 0 0; font-size: 0.85rem;">Powered by high-end NVIDIA GPU clusters.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800" alt="Coding">
+            <div class="overlay">
+                <strong>Project Development Center</strong>
+                <p style="margin: 5px 0 0; font-size: 0.85rem;">Open-source collaboration & Hackathon space.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="sub-heading">Academic Focus Areas</h2>
+    <ul class="highlight-list">
+        <li><strong>Data Structures & Algorithms:</strong> Building the logical foundation for complex problem solving.</li>
+        <li><strong>Full Stack Development:</strong> Industry-standard training in React, Node.js, and Cloud architectures.</li>
+        <li><strong>Big Data Analytics:</strong> Processing massive datasets using Hadoop and Spark frameworks.</li>
+        <li><strong>Internet of Things (IoT):</strong> Researching smart systems and sensor-driven automation.</li>
+    </ul>
+
+    <p style="text-align: center; margin-top: 50px; color: #888;">
+        &copy; 2026 BMSCE CSE Department Info Page
+    </p>
+
+</body>
+</html>

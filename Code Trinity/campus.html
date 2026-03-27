@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Life | BMSCE</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --sidebar-bg: #081735; /* Dark Maroon from your image */
+            --border-color: #0A1F44;
+            --accent-yellow: #ffcc00;
+            --active-red: #1F3A6D;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            background: #fdfdfd;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* LEFT SIDEBAR (Matching your image) */
+        .campus-sidebar {
+            width: 320px;
+            background: var(--sidebar-bg);
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .sidebar-header {
+            padding: 25px 20px;
+            color: #21e6fc; /* Red title from image */
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-menu li a {
+            display: block;
+            padding: 18px 20px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-bottom: 1px solid var(--border-color);
+            transition: 0.3s;
+        }
+
+        .sidebar-menu li a:hover {
+            background: var(--active-red);
+            padding-left: 30px;
+        }
+
+        /* RIGHT CONTENT AREA (Colorful & Vibrant) */
+        .main-content {
+            margin-left: 320px;
+            flex: 1;
+            padding: 40px;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Section Specific Colors */
+        .wellness { border-left: 10px solid #033004; } /* Green */
+        .hostel { border-left: 10px solid #2196F3; } /* Blue */
+        .sports { border-left: 10px solid #dd8d16; } /* Orange */
+        .festivals { border-left: 10px solid #76092d; } /* Pink */
+
+        .section-text { flex: 1; }
+        .section-text h2 { color: var(--active-red); margin-top: 0; }
+        
+        .section-img {
+            flex: 1;
+            height: 250px;
+            border-radius: 15px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 900px) {
+            body { flex-direction: column; }
+            .campus-sidebar { width: 100%; height: auto; position: relative; }
+            .main-content { margin-left: 0; }
+            .section-card { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="campus-sidebar">
+        <div class="sidebar-header">Campus Life</div>
+        <ul class="sidebar-menu">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#wellness">Wellness Community Centre</a></li>
+            <li><a href="#hostel">Hostel Life</a></li>
+            <li><a href="#sports">Sports</a></li>
+            <li><a href="#clubs">Clubs</a></li>
+            <li><a href="#activities">Student Activities</a></li>
+            <li><a href="#festivals">Campus Festivals</a></li>
+            <li><a href="#amenities">Campus Amenities</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        
+        <div class="section-card" id="overview">
+            <div class="section-text">
+                <h2>Campus Overview</h2>
+                <p>BMSCE offers a 15-acre sprawling green campus in the heart of Bengaluru. It is a hub of cultural diversity and academic energy.</p>
+                <ul style="color: #666;">
+                    <li>15,000+ Active Students</li>
+                    <li>State-of-the-art Auditoriums</li>
+                    <li>Open-air Theatres</li>
+                </ul>
+            </div>
+            <div class="section-img" style="background-image: url('assets/images/camp.jpeg');"></div>
+        </div>
+
+        <div class="section-card wellness" id="wellness">
+            <div class="section-img" style="background-image: url('assets/images/wellness.jpeg');"></div>
+            <div class="section-text">
+                <h2>Wellness Community Centre</h2>
+                <p>Dedicated to mental health, physical fitness, and student well-being. Includes a modern gym and counseling cells.</p>
+                <button class="btn" style="background: #033004;">View Facilities</button>
+            </div>
+        </div>
+
+        <div class="section-card festivals" id="festivals">
+            <div class="section-text">
+                <h2>UTSAV & PhaseShift</h2>
+                <p>Experience the magic of South India's largest cultural fest (Utsav) and our massive technical symposium (PhaseShift).</p>
+                <button class="btn" style="background: #76092d;">Event Calendar</button>
+            </div>
+            <div class="section-img" style="background-image: url('assets/images/utsav.jpeg');"></div>
+        </div>
+
+        <div class="section-card sports" id="sports">
+            <div class="section-img" style="background-image: url('assets/images/sport.jpeg');"></div>
+            <div class="section-text">
+                <h2>Sports & Athletics</h2>
+                <p>From indoor badminton courts to a massive cricket field, we nurture champions in every field.</p>
+                <button class="btn" style="background: #dd8d16;">Join a Team</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

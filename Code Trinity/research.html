@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research & Innovation | BMSCE</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Colorful & Modern Research Theme */
+        :root {
+            --research-gradient:linear-gradient(to right, #0A1F44, #1869e3);
+            --accent-gold:  #CC5500;
+            --glass: rgba(31, 156, 161, 0.1);
+        }
+
+        .research-hero {
+            height: 50vh;
+            background: linear-gradient(rgba(10, 31, 68), rgba(10, 31, 68)), url('assets/images/slider2.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            border-bottom: 5px solid var(--maroon);
+        }
+
+        .hero-content h1 { font-size: 3.5rem; margin: 0; text-transform: uppercase; letter-spacing: 3px; }
+        .hero-content p { font-size: 1.2rem; color: var(--accent-gold); }
+
+        /* Stats Bar - Colorful Gradient */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            background: var(--research-gradient);
+            padding: 40px 5%;
+            color: white;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .stat-card h2 { font-size: 2.5rem; margin: 0; color: var(--accent-gold); }
+
+        /* Research Areas - Hover Cards */
+        .research-container {
+            padding: 60px 5%;
+            background: #1a1a1a; /* Dark tech background */
+            color: white;
+        }
+
+        .area-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .area-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid navy;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .area-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 5px; height: 100%;
+            background: var(--maroon);
+        }
+
+        .area-card:hover {
+            transform: translateY(-10px);
+            background: rgb(23, 172, 157, 0.1);
+            border-color: var(--maroon);
+        }
+
+        .area-card h3 { color: var(--accent-gold); font-size: 1.5rem; }
+
+        /* Colorful Inquiry Section */
+        .inquiry-section {
+            padding: 60px 5%;
+            background: #fff;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .form-box {
+            flex: 1;
+            background: #fdfdfd;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        input:focus { border-color: var(--maroon); box-shadow: 0 0 5px rgba(139,21,21,0.3); }
+
+        .form-image { flex: 1; text-align: center; }
+        .form-image img { width: 100%; max-width: 450px; border-radius: 20px; }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a> 
+        <a href="about.html">About</a> 
+        <a href="departments.html">Departments</a> 
+        <a href="research.html" style="color: var(--maroon);">Research</a> 
+        <a href="placements.html">Placements</a> 
+    </nav>
+
+    <header class="research-hero">
+        <div class="hero-content">
+            <h1>Innovation Hub</h1>
+            <p>Pioneering the Future through Interdisciplinary Research</p>
+        </div>
+    </header>
+
+    <section class="stats-grid">
+        <div class="stat-card"><h2>500+</h2><p>Publications</p></div>
+        <div class="stat-card"><h2>120+</h2><p>Patents Filed</p></div>
+        <div class="stat-card"><h2>₹15Cr+</h2><p>Research Grants</p></div>
+        <div class="stat-card"><h2>25+</h2><p>Centers of Excellence</p></div>
+    </section>
+
+    <section class="research-container">
+        <h2 style="text-align: center; font-size: 2.5rem;">Key Research Thrust Areas</h2>
+        <div class="area-grid">
+            <div class="area-card">
+                <h3>AI & Machine Learning</h3>
+                <p>Developing ethical AI solutions and deep learning models for healthcare and urban planning.</p>
+            </div>
+            <div class="area-card">
+                <h3>Clean Energy</h3>
+                <p>Researching solar cell efficiency and smart grid integration for sustainable power.</p>
+            </div>
+            <div class="area-card">
+                <h3>Advanced Materials</h3>
+                <p>Exploring nanotechnology and composite materials for aerospace applications.</p>
+            </div>
+            <div class="area-card">
+                <h3>VLSI & IoT</h3>
+                <p>Designing the next generation of semiconductors and connected smart devices.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="inquiry-section">
+        <div class="form-box">
+            <h2 style="color: var(--maroon);">Research Collaboration</h2>
+            <p>Interested in partnering with BMSCE for a research project? Submit your inquiry below.</p>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Organization Email" required>
+                <select>
+                    <option>Select Domain</option>
+                    <option>Information Technology</option>
+                    <option>Robotics</option>
+                    <option>Material Science</option>
+                </select>
+                <textarea placeholder="Tell us about your research vision..." rows="4"></textarea>
+                <button type="submit" class="btn" style="width: 100%;">Submit Inquiry</button>
+            </form>
+        </div>
+        <div class="form-image">
+            <img src="assets/images/overview.png" class="float-img" alt="BMSCE Research">
+        </div>
+    </section>
+
+    <footer style="background: #1a1a1a; color: #777; padding: 30px; text-align: center;">
+        <p>&copy; 2026 BMS College of Engineering. Research & Development Cell.</p>
+    </footer>
+
+</body>
+</html>

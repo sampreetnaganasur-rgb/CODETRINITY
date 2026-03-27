@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCA Program | BMSCE Legacy</title>
+    <style>
+        :root {
+            --navy: #001f3f; 
+            --maroon: #8B1515; 
+            --gold: #FFD700; 
+            --text-dark: #333;
+        }
+
+        body { 
+            margin: 0; 
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: #ffffff; 
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px 0;
+            background: white;
+            gap: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--maroon); }
+
+        .active-link {
+            border-bottom: 2px solid var(--navy);
+            padding-bottom: 5px;
+        }
+
+        /* --- LEGACY BANNER --- */
+        .legacy-header {
+            background-color: var(--navy); 
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .legacy-header h1 {
+            font-size: 3.2rem;
+            margin: 0;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .legacy-header p {
+            font-size: 1.2rem;
+            margin-top: 15px;
+            color: #ccc;
+        }
+
+        /* --- MCA ROADMAP --- */
+        .container {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 5%;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--maroon);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .roadmap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 50px 0 80px;
+        }
+
+        .year-card {
+            background: rgba(0, 31, 63, 0.03); 
+            border: 1px solid rgba(0,31,63,0.05);
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .year-card:hover {
+            border-color: var(--navy);
+            transform: translateY(-10px);
+            background: rgba(0, 31, 63, 0.05);
+        }
+
+        .year-num {
+            font-size: 4rem;
+            font-weight: 900;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            opacity: 0.1;
+            color: var(--navy);
+        }
+
+        .year-card h3 { color: var(--navy); margin-top: 0; font-size: 1.4rem; }
+
+        /* --- FEATURE GRID --- */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 100px;
+            align-items: center;
+        }
+
+        .feature-text {
+            background: #f9f9f9;
+            padding: 50px;
+            border-radius: 20px;
+            border-top: 5px solid var(--navy);
+            text-align: left;
+        }
+        
+        .feature-text h2 {
+            margin-top: 0;
+            color: var(--navy);
+            font-size: 2.2rem;
+            border-bottom: 2px solid var(--maroon);
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .image-wrap { text-align: center; }
+
+        .main-img {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 10px solid #f0f0f0;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        /* --- MINI STATS --- */
+        .mini-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .m-stat b { display: block; font-size: 1.8rem; color: var(--maroon); }
+        .m-stat span { font-size: 0.8rem; color: #777; text-transform: uppercase; font-weight: bold; letter-spacing: 1px; }
+
+        footer {
+            margin-top: 100px;
+            padding: 40px 0;
+            text-align: center;
+            background: #f4f4f4;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 992px) {
+            .feature-grid { grid-template-columns: 1fr; }
+            .feature-text { order: 1; }
+            .image-wrap { order: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="departments.html">Departments</a>
+        <a href="mca.html" class="active-link">Academics</a>
+        <a href="research.html">Research</a>
+        <a href="placements.html">Placements</a>
+        <a href="campus.html">Campus</a>
+    </nav>
+
+    <div class="legacy-header">
+        <h1>Master of Computer Applications</h1>
+        <p>Building Digital Architects Since 1946</p>
+    </div>
+
+    <div class="container">
+        
+        <div style="text-align: center;">
+            <span class="badge">Post Graduate Program</span>
+            <p style="font-size: 1.1rem; color: #555; max-width: 750px; margin: 0 auto;">Master the art of software engineering. Our 2-year professional MCA program bridges the gap between foundational computer science and industry-grade application development.</p>
+        </div>
+
+        <div class="roadmap">
+            <div class="year-card">
+                <div class="year-num">01</div>
+                <h3>Sem 1: Fundamentals</h3>
+                <p>Deep dive into Object Oriented Programming, Data Structures, and Advanced Database Systems. Establishing the core logic for scalable software.</p>
+            </div>
+            <div class="year-card">
+                <div class="year-num">02</div>
+                <h3>Sem 2: Development</h3>
+                <p>Mastering Web Technologies, Cloud Architectures, and Software Engineering lifecycles. Students begin building full-stack industry applications.</p>
+            </div>
+            <div class="year-card">
+                <div class="year-num">03</div>
+                <h3>Sem 3: Specialization</h3>
+                <p>Exploring high-demand domains: AI/ML, Mobile App Development, and Cyber Security. Preparation for placements and technical interviews.</p>
+            </div>
+            <div class="year-card">
+                <div class="year-num">04</div>
+                <h3>Sem 4: Integration</h3>
+                <p>The Capstone phase. A full-semester industry internship and professional project implementation to transition into the corporate world.</p>
+            </div>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-text">
+                <h2>The Vanguard of Software Innovation</h2>
+                <p>MCA at BMSCE emphasizes <b>Outcome-Based Education (OBE)</b>. Students gain hands-on experience in modern labs, focusing on Agile methodologies and emerging tech stacks like MERN, DevOps, and Big Data.</p>
+                
+                <div class="mini-stats">
+                    <div class="m-stat"><b>100%</b><span>Placement Support</span></div>
+                    <div class="m-stat"><b>45 LPA</b><span>Highest Package</span></div>
+                    <div class="m-stat"><b>50+</b><span>Recruiting MNCs</span></div>
+                </div>
+            </div>
+
+            <div class="image-wrap">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800" class="main-img" alt="Software Engineering Lab">
+                <p style="color: #777; margin-top: 15px; font-size: 0.9rem;">Bridging Theory and Technology.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 BMS College of Engineering. All Rights Reserved. | Legacy in Computing & Excellence
+    </footer>
+
+</body>
+</html>
